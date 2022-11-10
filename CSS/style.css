@@ -145,15 +145,19 @@ header a:hover {
   text-decoration: none;
   background-color: transparent;
 }
+.navi .navbar-nav .nav-item {
+  padding: 0px 10px;
+}
 .navbar-expand-lg .navbar-nav .nav-link {
-  text-transform: capitalize;
+  
   transition: all 0.5s ease;
-  padding: 14px 10px;
+  /* padding: 14px 10px; */
   font-size: 1.2em;
   font-weight: 400;
   position: relative;
   color: var(--heading-color);
   display: block;
+  padding: 0px;
 }
 .navbar-expand-lg .navbar-nav .nav-link:hover {
   text-decoration: none;
@@ -164,12 +168,14 @@ a.dropdown-item::before {
   content: "";
   position: absolute;
   background: #189a46;
-  width: 0px;
+  width: 0;
   height: 1px;
-  bottom: 13px;
+  bottom: 0px;
+  left: 0px;
+  transition: all 1s;
 }
-.nav-link::before:hover,
-.dropdown-item::before:hover {
+.nav-link:hover::before,
+a.dropdown-item:hover::before {
   width: 100%;
 }
 .dropdown-item {
@@ -466,9 +472,13 @@ a.read:hover {
   background-color: var(--bg-light);
 }
 /* whyus */
+.whyus-item1{
+  text-align: center;
+}
 .whyus .whyus-content img {
   max-width: 100%;
   height: auto;
+  border-radius: 10px;
 }
 .whyus .whyus-content .whyus-item {
   align-self: center;
@@ -517,4 +527,80 @@ a.read:hover {
   color: rgba(225, 225, 225, 0.8);
   margin-top: 10px;
   font-weight: 400;
+}
+
+.about-carousel {
+  margin-top: 90px;
+    background: url(../img/banner4.jpg) no-repeat center;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    display: grid;
+    align-items: center;
+    padding: 10px 0;
+}
+.about-carousel h1{
+  font-size: 50px;
+    font-weight: 600;
+    color: #fff;
+}
+.about-carousel p{
+  font-weight: 400;
+  color: #fff;
+  font-size: 20px;
+}
+.about-carousel a{
+  text-decoration: none;
+  color: #189a46;
+  font-size: 20px;
+}
+.about-carousel::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  min-height: 100%;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #0c0c0c;
+  opacity: .6;
+}
+.aboutus-history .aboutus-history-content{
+  background: url(../img/banner2.jpg) no-repeat center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    display: grid;
+    align-items: center;
+}
+.aboutus-history .aboutus-history-content::before{
+  content: "";
+  background-color: rgba(0, 4, 8, 0.69);
+  position: absolute;
+  top: 0;
+  min-height: 100%;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+.aboutus-history-item{
+
+  margin-left: auto;
+  max-width: 640px;
+  text-align: left;
+
+}
+.aboutus-history-item .title h3{
+  color: #fff;
+}
+.aboutus-history-item-year{
+  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin-top: 40px;
+    color: #fff;
+
+}
+.aboutus-history-item-year1 p{
+  color: #696969;
 }
